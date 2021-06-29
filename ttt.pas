@@ -218,8 +218,12 @@ implementation
                         //Writeln(x); readln;
                         Readln(y);
                         //Writeln(y); readln;
-
-                        if ((x>=0) and (x<=2)) and ((y>=0) and (y<=2)) then
+                        
+                        if (x=3) or (y=3) then
+                        begin
+                                turn:=3;
+                                changed:=true;
+                        end else if ((x>=0) and (x<=2)) and ((y>=0) and (y<=2)) then
                         begin
                                 //Writeln('dddddddd'); readln;
                                 if Fields[x][y]=' ' then
@@ -230,10 +234,6 @@ implementation
                                         else
                                                 Fields[x][y]:='X';
                                         //Writeln('poza ifem');readln;
-                                        changed:=true;
-                                end else if (x=3) or (y=3) then
-                                begin
-                                        turn:=3;
                                         changed:=true;
                                 end else
                                 begin
