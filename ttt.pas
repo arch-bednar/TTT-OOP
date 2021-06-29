@@ -128,10 +128,10 @@ implementation
         function Tttt.diagonal: Boolean;
         begin
                 //Writeln('diagonal'); readln;
-                if (Fields[1][1] = Fields[0][0]) and (Fields[1][1] = Fields[2][2]) then
+                if (Fields[1][1] = Fields[0][0]) and (Fields[1][1] = Fields[2][2]) and (Fields[1][1] <> ' ') then
                         diagonal := true
 
-                else if (Fields[1][1] = Fields[0][2]) and (Fields[1][1] = Fields[2][0]) then
+                else if (Fields[1][1] = Fields[0][2]) and (Fields[1][1] = Fields[2][0]) and (Fields[1][1] <> ' ') then
                         diagonal := true
 
                 else
